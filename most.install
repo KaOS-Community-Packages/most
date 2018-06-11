@@ -1,0 +1,13 @@
+post_install() {
+  echo "tip: you can edit 'DEFINE pager most' in /etc/man_db.conf"
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  if [ $(cat /etc/man_db.conf | grep pager | grep most | wc -l) == "1" ]; then
+	echo "attention: you must reset 'DEFINE pager less' in /etc/man_db.conf"
+  fi
+}
