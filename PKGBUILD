@@ -1,6 +1,6 @@
 pkgname=most
-_pkgver=pre5.1-21
-pkgver=5.1.21pre
+_pkgver=pre5.1-20
+pkgver=5.1.20pre
 pkgrel=1
 pkgdesc="A terminal pager similar to 'more' and 'less'"
 arch=('x86_64')
@@ -9,7 +9,7 @@ license=('GPL')
 url="http://www.jedsoft.org/most/index.html"
 install="${pkgname}.install"
 source=(https://www.jedsoft.org/snapshots/${pkgname}-${_pkgver}.tar.gz)
-md5sums=('91082153a787de2c12906b321440068b')
+md5sums=('6642b4bdce5f5d0c170168f2b03c974a')
 
 build() {
   cd "${srcdir}/${pkgname}-${_pkgver}"
