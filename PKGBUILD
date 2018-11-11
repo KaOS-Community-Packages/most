@@ -1,5 +1,5 @@
 pkgname=most
-_pkgver=pre5.1-21
+_pkgver=pre5.1-24
 pkgver=$(echo ${_pkgver}|sed "s/pre//"|sed "s/\-/./")"pre"
 pkgrel=1
 pkgdesc="A terminal pager similar to 'more' and 'less'"
@@ -9,7 +9,7 @@ license=('GPL')
 url="http://www.jedsoft.org/most/index.html"
 install="${pkgname}.install"
 source=(https://www.jedsoft.org/snapshots/${pkgname}-${_pkgver}.tar.gz)
-md5sums=('91082153a787de2c12906b321440068b')
+md5sums=('a17377a6615fd1c02f24b6092b9d21f2')
 
 build() {
   cd "${srcdir}/${pkgname}-${_pkgver}"
@@ -26,6 +26,6 @@ package() {
   _docdir=${pkgdir}/usr/share/doc/${pkgname}
   _licdir=${pkgdir}/usr/share/licenses/${pkgname}
   install -dm755 ${_docdir} ${_licdir}
-  install -Dpm644 COPYRIGHT README changes.txt lesskeys.rc most-fun.txt most.doc most.hlp most.rc ${_docdir}/
+  install -Dpm644 COPYRIGHT NEWS README changes.txt doc/lesskeys.rc doc/most-fun.txt doc/most.hlp doc/most.rc ${_docdir}/
   install -Dpm644 COPYING ${_licdir}/
 }
