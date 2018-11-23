@@ -1,6 +1,6 @@
 pkgname=most
 _pkgver=pre5.1-24
-pkgver=$(echo ${_pkgver}|sed "s/pre//"|sed "s/\-/./")"pre"
+pkgver=5.1.24pre	#$(echo ${_pkgver}|sed "s/pre//"|sed "s/\-/./")"pre"
 pkgrel=1
 pkgdesc="A terminal pager similar to 'more' and 'less'"
 arch=('x86_64')
