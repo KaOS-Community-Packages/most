@@ -1,6 +1,5 @@
 pkgname=most
-_pkgver=pre5.1-24		#$(echo ${_pkgver}|sed "s/pre//"|sed "s/\-/./")"pre"
-pkgver=5.1.24pre
+pkgver=5.1.0
 pkgrel=1
 pkgdesc="A terminal pager similar to 'more' and 'less'"
 arch=('x86_64')
@@ -8,11 +7,11 @@ depends=('slang')
 license=('GPL')
 url="http://www.jedsoft.org/most/index.html"
 install="${pkgname}.install"
-source=(https://www.jedsoft.org/snapshots/${pkgname}-${_pkgver}.tar.gz)
-md5sums=('a17377a6615fd1c02f24b6092b9d21f2')
+source=(https://www.jedsoft.org/snapshots/${pkgname}-${pkgver}.tar.gz)
+md5sums=('0dc19e6045f689686e8579b2835cfdc6')
 
 build() {
-  cd "${srcdir}/${pkgname}-${_pkgver}"
+  cd "${srcdir}/${pkgname}-${pkgver}"
   msg "### configure"
   ./configure --prefix=/usr --sysconfdir=/etc
   msg "### make"
@@ -20,7 +19,7 @@ build() {
 }
 
 package() {
-  cd "${srcdir}/${pkgname}-${_pkgver}"
+  cd "${srcdir}/${pkgname}-${pkgver}"
   msg "### make install"
   make DESTDIR="${pkgdir}" install
   _docdir=${pkgdir}/usr/share/doc/${pkgname}
