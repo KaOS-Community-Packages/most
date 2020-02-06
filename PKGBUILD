@@ -7,8 +7,8 @@ depends=('slang')
 license=('GPL')
 url="http://www.jedsoft.org/most/index.html"
 install="${pkgname}.install"
-source=(https://www.jedsoft.org/snapshots/${pkgname}-${pkgver}.tar.gz)
-md5sums=('0dc19e6045f689686e8579b2835cfdc6')
+source=(https://www.jedsoft.org/releases/${pkgname}/${pkgname}-${pkgver}.tar.gz)
+sha1sums=('db811669a6b22c15478c957b439b5e4483ce1c95')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
